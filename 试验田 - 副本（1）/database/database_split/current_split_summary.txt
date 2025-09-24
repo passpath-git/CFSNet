@@ -1,0 +1,63 @@
+心脏四腔分割数据集当前分割摘要
+====================================
+
+分割时间: 2025-09-17 (扩展后)
+分割方法: 基于质量的随机分割 + 额外数据扩展
+
+数据集统计:
+- 总患者数: 160 (+30个新增)
+- 训练集: 120 个患者 (+20个新增)
+- 验证集: 40 个患者 (+10个新增)
+- 测试集: 未定义
+
+数据扩展信息 (2025-09-17):
+- 新增训练数据: patient1121-patient1140 (20个)
+- 新增验证数据: patient1141-patient1150 (10个)
+- 数据来源: 其他/USELESS/extracted_dataset/cardiacUDC_dataset
+- 质量标准: 前景像素>0.3%, 标签值修复为0-4范围
+
+质量评估标准:
+- 3D体积分析，遍历所有切片
+- 最小非背景像素数: 1000
+- 最少腔室标签数: 2个
+- 每个标签最小像素数: 100
+
+训练集患者 (100个):
+patient1113, patient0019, patient1055, patient1024, patient1047, patient1088, patient1105, patient1003, patient1109, patient1096
+patient1045, patient1042, patient1117, patient1011, patient1056, patient1005, patient1066, patient1034, patient1015, patient1059
+patient1101, patient1120, patient1025, patient0002, patient1062, patient1106, patient1036, patient1077, patient1049, patient1110
+patient1112, patient1012, patient1087, patient1033, patient1097, patient1061, patient0017, patient1068, patient1054, patient1037
+patient1040, patient1014, patient1092, patient1108, patient1009, patient1084, patient0005, patient0018, patient0026, patient1102
+patient0003, patient1094, patient0004, patient1091, patient1022, patient1026, patient1039, patient1085, patient0015, patient1051
+patient1079, patient1013, patient1038, patient1044, patient1065, patient1107, patient1100, patient1004, patient1072, patient0022
+patient0010, patient1007, patient1114, patient1080, patient1020, patient1093, patient1064, patient1074, patient1089, patient1070
+patient1081, patient1058, patient1069, patient1075, patient1002, patient1057, patient1076, patient1111, patient0025, patient1046
+patient1019, patient1052, patient1053, patient1010, patient1118, patient0011, patient1103, patient0016, patient1041, patient1031
+
+验证集患者 (30个):
+patient1067, patient0006, patient1006, patient1050, patient1017, patient1018, patient0013, patient1021, patient0012, patient0014
+patient1090, patient1095, patient0028, patient0020, patient1099, patient1016, patient1027, patient1063, patient0021, patient1098
+patient1071, patient0001, patient1086, patient1078, patient1115, patient1048, patient1116, patient1029, patient1082, patient1023
+
+数据质量分布:
+- 质量优秀: 大部分患者（4个腔室，>10000像素）
+- 质量良好: 部分患者（3个腔室，>5000像素）
+- 质量一般: 少数患者（2个腔室，>1000像素）
+
+注意事项:
+1. 所有患者都经过了严格的质量检查
+2. 分割基于随机种子42，确保可重复性
+3. 训练集和验证集之间没有重叠
+4. 数据来源于database/database_nifti目录
+
+文件结构:
+- subgroup_training.txt: 训练集患者列表
+- subgroup_validation.txt: 验证集患者列表
+- subgroup_testing.txt: 测试集（当前未定义）
+- split_information.txt: 详细分割信息
+- current_split_summary.txt: 本摘要文件
+
+
+
+
+

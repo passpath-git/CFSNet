@@ -1,0 +1,11 @@
+Dataset Split Information
+========================
+
+Total Patients: 130
+Training Set: 100 patients
+Validation Set: 30 patients
+Test Set: 0 patients (not defined)
+
+Training Patients: patient1001, patient1002, patient1003, patient1004, patient1005...
+Validation Patients: patient2020, patient2013, patient2017, patient2014, patient2011...
+Last Updated: 2025-08-29
